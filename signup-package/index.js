@@ -52,7 +52,6 @@ async function createAccount() {
     }),
   });
   const data = await response.json();
-  console.log(data);
   if (data.success) {
     ignoreMessage.textContent = "Account creat successfully";
     document.querySelector("#id_input").value = "";
