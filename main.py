@@ -18,7 +18,7 @@ class User(BaseModel):
 
 
 id_list = []
-
+user_list = []
 
 @app.post("/ids")
 def check_id(id_data: ID):
@@ -32,7 +32,17 @@ def check_id(id_data: ID):
 
 @app.get("/ids")
 def get_id():
-    return {id_list}
+    return {"id" :id_list}
+
+@app.post("/accounts")
+def acreat_account(user_data : User):
+    print("클라이언트에서 받은 계정정보:", user_data.id, user_data.password)    
+    user_list.append(user_data)
+    return {"success": True, "message": "Account created successfully"}
+
+@app.get("/accounts")
+def get_account():
+    return{"accounts": user_list}
 
 
     
