@@ -9,29 +9,31 @@
 </head>
 
 <body>
-    <form>
-        <div class="block">
-            <div>Enter your ID</div>
-            <input type="text" placeholder="ID Here" class="input-box" required />
-            <button type="submit">Check ID</button>
-        </div>
+    <div class="block">
+        <div>Enter your ID</div>
+        <input type="text" placeholder="ID Here" class="input-box" id="id_input" required />
+        <button type="button" id="id_btn">Check ID</button>
+        <input type="checkbox" id="id_check_box" disabled></input>
+        <div class="ignore-message" id="id-ignore"></div>
+    </div>
 
-        <div class="block">
-            <div>Enter your password</div>
-            <input type="password" placeholder="Password Here" class="input-box" required />
-            <button type="submit">Check password</button>
-        </div>
+    <div class="block">
+        <div>Enter your password</div>
+        <input type="password" placeholder="Password Here" class="input-box" id="password_input" required />
+        <div class="ignore-message" id="password-ignore"></div>
+    </div>
 
-        <div class="block">
-            <div>Enter your password onemore</div>
-            <input type="password" placeholder="Enter your password onemore" class="input-box" />
-            <button type="submit">Check password onemore</button>
-        </div>
+    <div class="block">
+        <div>Enter your password onemore</div>
+        <input type="password" placeholder="Enter your password onemore" class="input-box" id="check_password_input"
+            required />
+        <div class="ignore-message" id="check-password-ignore"></div>
+    </div>
 
-        <div class="block">
-            <button type="submit">Confirm</button>
-        </div>
-    </form>
+    <div class="block">
+        <button type="submit" id="confirm_btn">Confirm</button>
+        <div class="ignore-message" id="confirm-message"></div>
+    </div>
 
     <script src="index.js"></script>
 </body>

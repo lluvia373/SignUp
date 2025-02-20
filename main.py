@@ -15,6 +15,7 @@ class ID(BaseModel):
 class User(BaseModel):
     id: str
     password: str
+    check_password: str
 
 
 id_list = []
@@ -36,7 +37,7 @@ def get_id():
 
 @app.post("/accounts")
 def acreat_account(user_data : User):
-    print("클라이언트에서 받은 계정정보:", user_data.id, user_data.password)    
+    print("클라이언트에서 받은 계정정보:", user_data.id, user_data.password, user_data.check_password)    
     user_list.append(user_data)
     return {"success": True, "message": "Account created successfully"}
 
